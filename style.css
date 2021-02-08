@@ -12,7 +12,10 @@ html, body {
     background-color:#fff;
     display:flex;
     justify-content:space-between;
-    padding: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    top:0;left:0;
+    z-index: 2;
 }
 
 .logo, .logo a, .logo img {
@@ -20,6 +23,24 @@ html, body {
     width:43px;
     height:43px;
 }
+
+.logo img:hover {
+    animation-name: wiggle;
+    animation-duration: .5s;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(10deg);
+    } 30% {
+        transform: rotate(-10deg);
+    } 60% {
+        transform: rotate(10deg);
+    } 90% {
+        transform: rotate(0deg);
+    }
+}
+
 
 .site-nav {
     
@@ -40,13 +61,30 @@ html, body {
     color:#ef7998;
     text-decoration: none;
     font-size:29px;
+    position: relative;
+}
+
+.nav__link::after {
+    content:"";
+    display: block;
+    width: 0%;
+    background-color:#ef7998;
+    height:3px;
+    position: absolute;
+    bottom:0; left:0;
+    transition: width .1s linear;
+    border-radius: 3px;
+}
+
+.nav__link:hover::after {
+    width: 100%;
 }
 
 .nav-info {
     display:flex;
 }
 
-.btn, .cart-link {
+.link-border, .cart-link {
     border:2px solid #000;
     border-radius:2px;
     background-color:transparent;
@@ -54,11 +92,17 @@ html, body {
     font-family: 'Kaushan Script', cursive;
     font-size:inherit;
     cursor:pointer;
+    text-decoration: none;
+    color:inherit;
 }
 
-.btn:hover, .cart-link:hover {
+.link-border:hover, .cart-link:hover {
     background-color:#000;
     color:#fff;
+}
+
+.link-border--black {
+    color:#000;
 }
 
 .cart-link {
@@ -67,14 +111,14 @@ html, body {
     display:block;
 }
 
-.btn--uppercase {
+.text--uppercase {
     text-transform: uppercase;
-    
 }
 
 .welcome {
     width:100%;
-    height:calc(100vh - 63px);
+    padding-top:63px;
+    height:100vh;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +128,7 @@ html, body {
     background-image:url(view-assets/header-background.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -63px;
+    background-position: center 0px;
     background-attachment: fixed;
 }
 
@@ -110,8 +154,13 @@ html, body {
 
 .highlighted-text {
     color:#ef7998;
-    font-size:65px;
+    font-size:55px;
     font-weight: bold;
+}
+
+h2 {
+    font-size:28px;
+    color:#000;
 }
 
 .link {
@@ -127,4 +176,90 @@ html, body {
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.section {
+    padding:100px 0
+}
+
+.container {
+    width:1000px;
+    margin:0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.half {
+    width:50%;
+}
+
+.image-wrapper {
+    border:8px solid #f9e494;
+    position: relative;
+}
+
+.image {
+    position: relative;
+    top:24px; left:28px;
+    width:100%;
+}
+
+.content {
+    padding:40px;
+    color:#6c757d;
+}
+
+
+.footer {
+    background-color: #eeeeee;
+    padding: 60px 0;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row-reverse;
+    width:550px;
+    margin:0 auto;
+    padding-top:40px;
+}
+
+.input-text {
+    padding:10px;
+    background-color:#fff;
+    border:1px solid #ced4da;
+    font-size:16px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    width:calc(100% - 40px);
+    font-family: Kaushan Script;
+}
+
+.search-btn {
+    background-color: #ef7998;
+    width:40px;
+    border:none;
+    border-top: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor:pointer;
+}
+
+.search-btn:hover {
+    font-size:18px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    width:600px;
+    margin:0 auto;
 }

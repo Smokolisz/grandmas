@@ -38,19 +38,61 @@
         </nav>
         <div class="nav-info">
             <div class="center">
+                <i class="fas fa-phone"></i>&nbsp;
                 <a href="tel:123456789" class="link">+ 123 456 789</a>
             </div>
             <div>
-                <a class="cart-link">cart 2 Items - $10.49</a>
+                <a class="cart-link">
+                    <i class="fas fa-shopping-cart"></i> cart 2 Items - $10.49
+                </a>
             </div>
         </div>
     </div>
-    <main class="welcome">
-        <header class="welcome__header">
-            <p>Welcome To <span class="highlighted-text">Grandma's</span></p>
-            <button class="btn btn--uppercase">Explore</button>
-        </header>
+    <main>
+        <div class="welcome">
+            <header class="welcome__header">
+                <h1>Welcome To <span class="highlighted-text">Grandma's</span></h1>
+                <a href="#content" class="link-border text--uppercase link-border--black">Explore</a>
+            </header>
+        </div>
+
+        <section class="section" id="content">
+            <div class="container row">
+                <div class="half content">
+                    <h2>About <span class="highlighted-text">Us</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asoeriores facere fuga dieta fugiat corrupti et omnis porro at dolorum! Ad!</p>
+                    <button class="link-border text--uppercase">Explore</button>
+                </div>
+                <div class="half">
+                    <div class="image-wrapper">
+                        <img src="view-assets/footer-right-column.jpeg" class="image">
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
+
+    <footer class="footer">
+        <h2 class="text-center">Our <span class="highlighted-text">Store</span></h2>
+        <div class="categories">
+            <a href="#" class="link-border text--uppercase">All</a>
+            <a href="#" class="link-border text--uppercase">Cakes</a>
+            <a href="#" class="link-border text--uppercase">Cupcakes</a>
+            <a href="#" class="link-border text--uppercase">Sweets</a>
+            <a href="#" class="link-border text--uppercase">Doughnuts</a>
+        </div>
+        <div>
+            <form method="GET" class="search-form">
+                <input type="text" placeholder="item..." name="search" class="input-text">
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/efef88a595.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
